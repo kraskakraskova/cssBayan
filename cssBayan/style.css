@@ -4,17 +4,21 @@
   font-size: 18px;
 }
 
+body {
+  background-color: whitesmoke;
+}
+
 .header {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 600;
-  padding: 1em;
+  padding: 1em 1em 3em;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: azure;
+  padding: 6em;
 }
 
 .block {
@@ -22,39 +26,22 @@
   margin: 0 auto;
 }
 
-.faq {
-  margin: 15px 0px;
-
-  display: flex;
-  justify-content: center;
-}
-
-input::-webkit-details-marker {
-  display: none;
-}
-
-input::before {
-  content: "+";
-  float: left;
-  font-size: 22px;
-  margin: -5px 10px 0 0;
-  text-align: center;
-  width: 20px;
-}
-
-details[open] summary::before {
-  content: "-";
-}
 input {
   position: absolute;
   opacity: 0;
   z-index: -1;
 }
+
 .accordion {
-  margin: 10px;
-  border-radius: 5px;
+  margin: 0.5em;
   overflow: hidden;
+  cursor: pointer;
 }
+
+label {
+  border-top: solid 1px silver;
+}
+
 .tab-label {
   display: flex;
   justify-content: space-between;
@@ -62,12 +49,20 @@ input {
   font-weight: bold;
   cursor: pointer;
 }
+
 .tab-content {
   max-height: 0;
   padding: 0 1em;
   transition: all 0.35s;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
 }
+
 input:checked ~ .tab-content {
   max-height: 100vh;
   padding: 1em;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
 }
