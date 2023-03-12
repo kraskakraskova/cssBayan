@@ -14,6 +14,10 @@ body {
   padding: 1em 1em 3em;
 }
 
+img {
+  width: 400px;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -65,4 +69,33 @@ input:checked ~ .tab-content {
   display: flex;
   margin: 0 auto;
   justify-content: center;
+}
+
+i:active {
+  transition: 1.35s;
+  background-image: url("Images/xmark-solid.svg");
+}
+
+@media (min-width: 320px) and (max-width: 819px) {
+  * {
+    font-size: 100%;
+  }
+  .header {
+    font-size: 100%;
+  }
+  .content {
+    padding: 0;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 820px) and (max-width: 1080px) {
+  * {
+    font-size: 105%;
+  }
+  .header {
+    font-size: 120%;
+  }
 }
