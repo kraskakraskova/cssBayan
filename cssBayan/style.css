@@ -72,8 +72,8 @@ input:checked ~ .tab-content {
 }
 
 i:active {
-  transition: 1.35s;
-  background-image: url("Images/xmark-solid.svg");
+  transition: all 0.35s;
+  transform: rotate(45deg);
 }
 
 @media (min-width: 320px) and (max-width: 819px) {
